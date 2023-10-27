@@ -1,0 +1,18 @@
+{
+  "name": "aerolinea",
+  "version": "1.0.0",
+  "description": "pagina para una areolinea usando fomantic iu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "areolinea"
+  },
+  "author": "juankio",
+  "license": "ISC",
+  "dependencies": {
+    "fomantic-ui": "^2.9.4-beta.15"
+  }
+}
