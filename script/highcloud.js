@@ -1,6 +1,4 @@
-// AllForOne.js
 
-// Define los vuelos disponibles para la aerolínea AllForOne
 const flights = [
     {
         "title": "MEX - CUN",
@@ -59,9 +57,7 @@ const flights = [
     }
 ];
 
-    // Agrega más vuelos aquí
 
-// Función para mostrar los vuelos de AllForOne en la página
 function displayAllForOneFlights() {
     const resultsContainer = document.getElementById("flight-results");
 
@@ -96,5 +92,4 @@ function displayAllForOneFlights() {
     });
 }
 
-// Llama a la función para mostrar los vuelos de AllForOne
 displayAllForOneFlights();

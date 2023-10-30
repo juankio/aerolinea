@@ -6,7 +6,6 @@ const budget = urlParams.get("budget");
 $(document).ready(function () {
     $('.ui.dropdown').dropdown();
 
-    // Controlador de cambio en el menú desplegable de aerolínea
     $('#airline-dropdown').dropdown({
         onChange: function (value) {
             filterFlightsByAirline(value);
@@ -25,9 +24,6 @@ $(document).ready(function () {
             alert("presupuesto bajo")
         }
         
-    // Función para filtrar vuelos por aerolínea y mostrarlos
-
-    // Función para mostrar los vuelos en la página
     function displayFlights(flights) {
         const resultsContainer = document.getElementById("flight-results");
         resultsContainer.innerHTML = '';
