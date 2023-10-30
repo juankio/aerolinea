@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueSky</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script src="../semantic/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui fixed menu" style="background-color: #4C7BD2;">
+        <div class="ui container">
+            <a href="#" class="header item" style="color: white">
+                BlueSky
+            </a>
+            <a href="#" class="item" style="color: white">Inicio</a>
+            <a href="allforone.html" class="item" style="color: white">AllForOne</a>
+            <a href="highcloud.html" class="item" style="color: white">HighCloud</a>
+            <a href="airdeluxe.html" class="item" style="color: white">AirDeluxe</a>
+        </div>
+    </div>
+
+    <div class="ui container" style="padding: 50px;">
+        <div class="ui segment" style="text-align: center;">
+
+            <div class="ui stackable grid">
+                <div class="four wide column">
+                    <div class="ui padded segment" style="margin-top: 10px;">
+                        <div class="ui form">
+                            <div class="field">
+                                <label for="text-input">Usuario</label>
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" id="text-input" placeholder="Nombre de usuario">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui padded segment" style="margin-top: 10px;">
+                        <div class="ui form">
+                            <div class="field">
+                                <label for="startLocation">Lugar de Salida</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="startLocation">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Selecciona una ciudad</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="nyc">
+                                            <i class="us flag"></i> Nueva York
+                                        </div>
+                                        <div class="item" data-value="paris">
+                                            <i class="france flag"></i> París
+                                        </div>
+                                        <div class="item" data-value="tokyo">
+                                            <i class="japan flag"></i> Tokio
+                                        </div>
+                                        <!-- Agrega más ciudades aquí -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="startDate">Fecha de Salida</label>
+                                <div class="ui calendar" id="rangestart">
+                                    <div class="ui input left icon">
+                                        <i class="calendar icon"></i>
+                                        <input type="text" id="startDate" placeholder="Start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui padded segment" style="margin-top: 10px;">
+                        <div class="ui form">
+                            <div class="field">
+                                <label for="returnLocation">Lugar de Regreso</label>
+                                <div class="ui selection dropdown">
+                                    <input type="hidden" name="returnLocation">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Selecciona una ciudad</div>
+                                    <div class="menu">
+                                        <div class="item" data-value="nyc">
+                                            <i class="us flag"></i> Nueva York
+                                        </div>
+                                        <div class="item" data-value="paris">
+                                            <i class="france flag"></i> París
+                                        </div>
+                                        <div class="item" data-value="tokyo">
+                                            <i class="japan flag"></i> Tokio
+                                        </div>
+                                        <!-- Agrega más ciudades aquí -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="endDate">Fecha de Regreso</label>
+                                <div class="ui calendar" id="rangeend">
+                                    <div class="ui input left icon">
+                                        <i class="calendar icon"></i>
+                                        <input type="text" id="endDate" placeholder="End">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui padded segment" style="margin-top: 10px;">
+                        <div class="ui form">
+                            <div class="field">
+                                <label for="budget">Presupuesto</label>
+                                <div class="ui left icon input">
+                                    <i class="dollar sign icon"></i>
+                                    <input type="text" id="budget" placeholder="Presupuesto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui container" style="text-align: center; margin-top: 20px;">
+                    <button class="ui primary button" id="search-flights">
+                        Buscar Vuelos
+                    </button>
+                </div>
+            </div>
+
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="https://imgs.search.brave.com/9F8pZKeRm-6lD1qnznvtBl7zxBpm6t_uB6ejRuLSh1w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pY2hl/Zi5iYmNpLmNvLnVr/L25ld3MvNjQwL2Nw/c3Byb2RwYi8xNkQw/OC9wcm9kdWN0aW9u/L18xMTkzODQ0Mzlf/NGQ2YjEyY2UtYjQx/Yi00ZTZkLTkyNDIt/ODU3NGIzNGY5ZWU4/LmpwZw"
+                                alt="Promoción 1 para amazonas">
+                        </div>
+                        <div class="content">
+                            <div class="header">Promoción 1 para amazonas</div>
+                            <div class="description">Descripción de la promoción. Cantidad de personas, aerolíneas
+                                disponibles,
+                                etc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="https://imgs.search.brave.com/0-sWDhg95GxwY-Uc_IXeurXJLkdhmVpRCGpVkdjmcBs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzc4LzYwLzA1/LzM2MF9GXzc4NjAw/NTE2X2h2UUgzdmdL/OTFTcnM5dVpnNjR6/VVhlMWpPaXdFMkRs/LmpwZw"
+                                alt="Promoción 2 para Rio de janeiro">
+                        </div>
+                        <div class="content">
+                            <div class="header">Promoción 2 Rio de janeiro</div>
+                            <div class="description">Descripción de la promoción. Cantidad de personas, aerolíneas
+                                disponibles,
+                                etc.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+
+<script src="/script/funciones.js"></script>
+
+</html>

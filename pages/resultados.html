@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+    <script src="../semantic/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <div class="ui container" style="text-align: center; padding: 20px;">
+        <h2>Resultados de Vuelos</h2>
+        <div class="ui selection dropdown" id="airline-dropdown">
+            <input type="hidden" name="airline">
+            <i class="dropdown icon"></i>
+            <div class="default text">Selecciona una aerolínea</div>
+            <div class="menu">
+                <div class="item" data-value="AllForOne">AllForOne</div>
+                <div class="item" data-value="HighCloud">HighCloud</div>
+                <div class="item" data-value="AirDeluxe">AirDeluxe</div>
+            </div>
+        </div>
+    </div>
+    <div class="ui container" id="flight-results">
+        <!-- Aquí se mostrarán los vuelos de acuerdo a la aerolínea seleccionada -->
+    </div>
+    <script src="/script/funcionesresultado.js"></script>
+</body>
+
+</html>
