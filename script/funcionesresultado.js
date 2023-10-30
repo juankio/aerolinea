@@ -35,7 +35,20 @@ $(document).ready(function () {
         if (flights.length > 0) {
             flights.forEach(flight => {
                 const flightInfo = document.createElement("div");
-                flightInfo.innerHTML = `<strong>${flight.airline}</strong> - Precio: $${flight.price} - Salida: ${flight.departure} - Regreso: ${flight.return}`;
+                flightInfo.innerHTML = `<div class="ui items">
+                <!-- Repite este bloque para cada vuelo en tu lista -->
+                <div class="item">
+                    <div class="content">
+                        <div class="header">
+                            <strong>${flight.airline}</strong>
+                        </div>
+                        <div class="description">
+                            Precio: $${flight.price} - Salida: ${flight.departure} - Regreso: ${flight.return}
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin del bloque repetible -->
+            </div>`;
                 resultsContainer.appendChild(flightInfo);
             });
         } else {

@@ -81,7 +81,8 @@ function displayAllForOneFlights() {
             <strong>Asientos disponibles:</strong> ${flight.availableSeats}
         </div>
     </div>
-    <button class="ui primary button flight-buy-button">Comprar</button>
+    <button class="ui primary button flight-buy-button"><a href="compra.html">Comprar</a>
+    </button>
 `;
     
         resultsContainer.appendChild(flightElement);

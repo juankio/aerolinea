@@ -71,26 +71,11 @@ function displayAllForOneFlights() {
         const flightElement = document.createElement("div");
         flightElement.classList.add("ui", "segment", "flight");
         flightElement.innerHTML = `
-        <div class="flight-flag">
-        <i class="${flight.flag} flag"></i>
-    </div>
-    <div class="flight-title">${flight.title}</div>
-    <div class="flight-price">$${flight.price}</div>
-    <div class="flight-info">
-        <div class="flight-departure">
-            <strong>Salida:</strong> ${flight.departure} - ${flight.departureTime}
-        </div>
-        <div class="flight-return">
-            <strong>Regreso:</strong> ${flight.return} - ${flight.returnTime}
-        </div>
-        <div class="flight-destination-image">
-            <img src="${flight.destinationImage}" alt="Destino">
-        </div>
-        <div class="flight-available-seats">
-            <strong>Asientos disponibles:</strong> ${flight.availableSeats}
-        </div>
-    </div>
-    <button class="ui primary button flight-buy-button">Comprar</button>
+        <div class="ui segment">
+    <strong>${flight.airline}</strong> - Precio: $${flight.price} - Salida: ${flight.departure} - Regreso: ${flight.return}
+    <button class="ui primary button flight-buy-button"><a href="compra.html">Comprar</a>
+    </button>
+</div>
 `;
     
         resultsContainer.appendChild(flightElement);
