@@ -1,8 +1,8 @@
 {
   "name": "aerolinea",
   "version": "1.0.0",
-  "description": "pagina para una areolinea usando fomantic iu",
-  "main": "index.js",
+  "description": "pagina para una areolinea usando fomantic iu solo necesita descargar las dependencies con npm i",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
